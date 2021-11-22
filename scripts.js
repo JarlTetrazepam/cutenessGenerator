@@ -1,5 +1,5 @@
 const fetchImage = () => {
-    let APIs = ["https://thatcopy.pw/catapi/rest/", "https://random.dog/woof.json", "https://random-d.uk/api/random", "https://randomfox.ca/floof/"];
+    let APIs = ["https://thatcopy.pw/catapi/rest/", "https://random.dog/woof.json", "https://randomfox.ca/floof/"];
     let randomValue = Math.floor((Math.random() * APIs.length))
     console.log('trying to access ' + APIs[randomValue])
     let oReq = new XMLHttpRequest();
