@@ -1,7 +1,7 @@
 const fetchImage = () => {
     let APIs = ["https://thatcopy.pw/catapi/rest/", "https://random.dog/woof.json", "https://randomfox.ca/floof/"];
     let randomValue = Math.floor((Math.random() * APIs.length))
-    console.log('trying to access ' + APIs[randomValue])
+    // console.log('trying to access ' + APIs[randomValue])
     let oReq = new XMLHttpRequest();
     oReq.addEventListener("load", imageReplacer);
     oReq.open("GET", APIs[randomValue])
@@ -9,7 +9,7 @@ const fetchImage = () => {
 }
 
 function imageReplacer() {
-    console.log(JSON.parse(this.responseText)["url"] || JSON.parse(this.responseText)["image"])
+    // console.log(JSON.parse(this.responseText)["url"] || JSON.parse(this.responseText)["image"])
     let imageTag = document.querySelector(".cuteImage")
     let image = JSON.parse(this.responseText)["url"] || JSON.parse(this.responseText)["image"];
     imageTag.src = image
@@ -18,3 +18,7 @@ function imageReplacer() {
 document.addEventListener('DOMContentLoaded', function() {
     fetchImage()
 }, false);
+
+document.querySelector(".generatorButton").addEventListener("click", () => {
+    fetchImage()
+})

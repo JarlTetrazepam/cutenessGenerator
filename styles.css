@@ -39,6 +39,7 @@ main {
     background-color: white;
     min-height: 50%;
     min-width: 50%;
+    height: 75vh;
     margin: 2rem;
     display: flex;
     justify-content: space-between;
