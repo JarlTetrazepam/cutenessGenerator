@@ -1,10 +1,11 @@
 const fetchImage = () => {
-    let APIs = ["https://thatcopy.pw/catapi/rest/", "https://random.dog/woof.json", "https://randomfox.ca/floof/"];
-    let randomValue = Math.floor((Math.random() * APIs.length))
-    // console.log('trying to access ' + APIs[randomValue])
+    let imageAPIs = ["https://thatcopy.pw/catapi/rest/", "https://random.dog/woof.json", "https://randomfox.ca/floof/"];
+    let factAPIs = ["https://meowfacts.herokuapp.com/", "https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1", "http://api.fungenerators.com/fact/random?category=animal&subcategory=fox"]
+    let randomValue = Math.floor((Math.random() * imageAPIs.length))
+    // console.log('trying to access ' + imageAPIs[randomValue])
     let oReq = new XMLHttpRequest();
     oReq.addEventListener("load", imageReplacer);
-    oReq.open("GET", APIs[randomValue])
+    oReq.open("GET", imageAPIs[randomValue])
     oReq.send()
 }
 
