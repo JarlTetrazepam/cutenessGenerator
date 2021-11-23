@@ -28,7 +28,6 @@ header {
 
 main {
     min-width: 100%;
-    background-color: red;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +35,8 @@ main {
 }
 
 .mainContent {
-    background-color: white;
+    border: 0.1rem solid var(--mainTheme);
+    border-radius: 1rem;
     min-height: 50%;
     min-width: 50%;
     height: 75vh;
@@ -48,6 +48,7 @@ main {
 .cuteImage {
     max-width: 70%;
     max-height: 80vh;
+    border-radius: 0.8rem 0 0 0.8rem;
 }
 
 .factText {
