@@ -9,7 +9,7 @@ const fetchImage = () => {
     oReqImage.send()
     let oReqFacts = new XMLHttpRequest()
     oReqFacts.addEventListener("load", factReplacer)
-    if (randomValue === 1) { // 1 being the index for a dog picture
+    if (randomValue === 1) { // 1 being the index for   a dog picture
         oReqFacts.open("GET", randomizedDogFactAPI())
     } else {
         oReqFacts.open("GET", factAPIs[randomValue])
